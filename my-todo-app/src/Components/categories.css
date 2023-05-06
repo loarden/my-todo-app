@@ -1,0 +1,9 @@
+.categories-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3%;
+}
+
+h1 {
+  text-align: center;
+}
