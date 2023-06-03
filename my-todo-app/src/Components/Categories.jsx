@@ -1,18 +1,15 @@
-import TodoList from "./TodoList";
-import "./categories.css"
+import { Card, CardContent, Typography } from "@mui/material"
 
-function Categories(props) {
+function Categories({title}) {
   return (
-    <div className="categories">
-      <h1>Todo List</h1>
-      <div className="categories-wrapper">
-        <TodoList />
-        <TodoList />
-        <TodoList />
-      </div>
-      <input placeholder="Add new category"/>
-    </div>
+    <Card sx={{ maxWidth: '20em', width: '100%', minHeight: '10em' }}>
+      <CardContent>
+        <Typography variant="h5" sx={{textAlign: 'center', borderBottom: '1px solid black'}}>
+          {title}
+        </Typography>
+      </CardContent>
+    </Card>
   )
 }
 
-export default Categories;
+export default Categories
