@@ -2,10 +2,11 @@ import Categories from "./Components/Categories"
 import NavigationBar from "./Components/NavigationBar"
 import {  useCallback, useEffect, useState } from "react"
 
-const elementsFromLocalStorage = JSON.parse(localStorage.getItem('categories') || [])
-
 function App() {
-  const [categories, setCategories] = useState(elementsFromLocalStorage)
+  const [categories, setCategories] = useState(() => {
+    const storage = JSON.parse(localStorage.getItem('categories'))
+    return storage || []
+  })
   
   const handlewAddNew = (response) => {
     setCategories([...categories, ...[{title: response, todos: []}]])
