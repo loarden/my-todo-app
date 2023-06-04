@@ -9,7 +9,7 @@ function Categories({ categoryIndex, title, todos, onAddTodo, onDoneTodo, onDele
   const [todoInput, setTodoInput] = useState('')
 
   return (
-    <Card className="max-w-md w-11/12">
+    <Card className="max-w-sm w-11/12">
       <CardBody className="flex flex-col">
         <div className="flex justify-between">
           <Typography variant='h5' className='border-b-1'>
@@ -19,11 +19,11 @@ function Categories({ categoryIndex, title, todos, onAddTodo, onDoneTodo, onDele
         </div>
         <div className="w-full py-2 border-b-2 border-gray-400 relative">
           <Input value={todoInput} onChange={(e) => setTodoInput(e.target.value)} color="purple" label="Add new todo" />
-          <IconButton onClick={() => {
+          <IconButton color="purple" onClick={() => {
             onAddTodo(todoInput)
             setTodoInput('')
           }} variant="text" className="!absolute right-0 top-2">
-            <AddIcon />
+            <AddIcon/>
           </IconButton>
         </div>
         <List className="mt-4 p-0 w-full">

@@ -29,14 +29,15 @@ function NavigatonBar({ onAddNew }) {
           <Input
             value={value}
             onChange={changeHandler}
-            type="search"
-            label="Type here..."
+            type="text"
+            color="purple"
+            label="Add new category..."
             className="pr-20"
             containerProps={{
               className: "min-w-[288px]",
             }}
           />
-          <Button onClick={handleAddNew} size="sm" className="!absolute right-1 top-1 rounded">
+          <Button color="purple" onClick={handleAddNew} size="sm" className="!absolute right-1 top-1 rounded">
             AddNew
           </Button>
         </div>

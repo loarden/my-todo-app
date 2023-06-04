@@ -4,7 +4,7 @@ import DoneIcon from '@mui/icons-material/Done';
 
 function Todo({ todoIndex, title, isDone, onDoneTodo, onDeleteTodo }) {
   return (
-    <ListItem className="flex justify-between">
+    <ListItem className="flex justify-between hover:bg-deep-purple-100">
       {isDone ?
         <Typography className='line-through'>
           {title}
